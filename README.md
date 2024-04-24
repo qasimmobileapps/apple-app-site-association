@@ -1,2 +1,0 @@
-# Qasimmobileapps
-Qasimmobileapps
