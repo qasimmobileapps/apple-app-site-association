@@ -1,0 +1,11 @@
+frontend:
+  phases:
+    preBuild:
+      commands:
+        # Add commands if needed
+    build:
+      commands:
+        # Add commands if needed
+    postBuild:
+      commands:
+        - echo '{"Content-Type": "application/json"}' > path/to/.well-known/apple-app-site-association
