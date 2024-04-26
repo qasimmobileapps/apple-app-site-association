@@ -1,11 +1,22 @@
+version: 1
 frontend:
   phases:
     preBuild:
       commands:
-        # Add commands if needed
+        # Add pre-build commands here
     build:
       commands:
-        # Add commands if needed
-    postBuild:
-      commands:
-        - echo '{"Content-Type": "application/json"}' > path/to/.well-known/apple-app-site-association
+        # Add build commands here
+  artifacts:
+    baseDirectory: /
+    files:
+      - '**/*'
+  customHeaders:
+    - pattern: '**/*'
+      headers:
+        - key: 'Content-Type'
+          value: 'text/html'
+    - pattern: '.well-known/apple-app-site-association'
+      headers:
+        - key: 'Content-Type'
+          value: 'application/json'
